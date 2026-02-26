@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire de contact — Fagla225</title>
+
+    <style>
+        /* Style général */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f0f4ff;
+        }
+
+        /* ---- NAVIGATION ---- */
+        nav {
+            background-color: #1a73e8;
+            padding: 15px 20px;
+        }
+
+        nav h1 {
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        /* ---- CARTE DU FORMULAIRE ---- */
+        /* On centre la carte au milieu de la page */
+        .carte {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 30px 25px;
+            max-width: 480px;
+            margin: 40px auto;
+        }
+
+        .carte h2 {
+            color: #1a73e8;
+            margin-bottom: 8px;
+        }
+
+        .carte p {
+            color: #555;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+        }
+
+        /* ---- CHAMPS DU FORMULAIRE ---- */
+        /* Chaque groupe label + input */
+        .groupe {
+            margin-bottom: 20px;
+        }
+
+        /* Le label c'est le texte au-dessus du champ */
+        label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 6px;
+            color: #333;
+        }
+
+        /* Les champs de saisie */
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: Arial, sans-serif;
+            font-size: 0.95rem;
+            color: #333;
+            /* box-sizing permet que le padding
+               ne dépasse pas la largeur du champ */
+            box-sizing: border-box;
+        }
+
+        /* Quand on clique sur un champ, il devient bleu */
+        input:focus, textarea:focus {
+            border-color: #1a73e8;
+            outline: none;
+        }
+
+        /* La zone de texte pour le message */
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        /* ---- BOUTON ENVOYER ---- */
+        .bouton {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: Arial, sans-serif;
+            cursor: pointer;
+        }
+
+        /* ---- PIED DE PAGE ---- */
+        footer {
+            background-color: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <h1>Fagla225</h1>
+    </nav>
+
+    <!-- FORMULAIRE -->
+    <div class="carte">
+        <h2>Contactez-moi</h2>
+        <p>Remplissez ce formulaire pour m'envoyer un message.</p>
+
+        <!-- action="#" veut dire que le formulaire ne va nulle part
+             car on n'a pas encore de langage serveur -->
+        <form action="#">
+
+            <!-- CHAMP NOM -->
+            <div class="groupe">
+                <label for="nom">Nom</label>
+                <input
+                    type="text"
+                    id="nom"
+                    name="nom"
+                    placeholder="Votre nom"
+                >
+            </div>
+
+            <!-- CHAMP EMAIL -->
+            <div class="groupe">
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="votre@email.com"
+                >
+            </div>
+
+            <!-- CHAMP MESSAGE -->
+            <div class="groupe">
+                <label for="message">Message</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Écrivez votre message ici..."
+                ></textarea>
+            </div>
+
+            <!-- BOUTON ENVOYER -->
+            <button type="submit" class="bouton">Envoyer</button>
+
+        </form>
+    </div>
+
+    <!-- PIED DE PAGE -->
+    <footer>
+        <p>Formulaire réalisé par Fagla225 — HTML / CSS</p>
+    </footer>
+
+</body>
+</html>
