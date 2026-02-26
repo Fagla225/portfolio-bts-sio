@@ -7,9 +7,9 @@ et je me forme en autodidacte au développement web depuis 8 mois.
 
 | Projet | Description | Technologies |
 |--------|-------------|--------------|
-| `page-responsive.html` | Page web adaptée mobile et desktop | HTML / CSS |
-| `site-vitrine.html` | Site de présentation multi-sections | HTML / CSS |
-| `formulaire-stylise.html` | Formulaire de contact avec validation | HTML / CSS |
+| page-responsive.html | Page web adaptée mobile et desktop | HTML / CSS |
+| site-vitrine.html | Site de présentation multi-sections | HTML / CSS |
+| formulaire-stylise.html | Formulaire de contact avec validation | HTML / CSS |
 
 ## 🛠️ Technologies utilisées
 
@@ -20,6 +20,12 @@ et je me forme en autodidacte au développement web depuis 8 mois.
 
 Ces projets ont été réalisés dans le cadre de ma candidature au BTS SIO SLAM. 
 Ils démontrent mes premières compétences en développement front-end.
+
+## 📝 Note
+
+Ce formulaire est une maquette visuelle en HTML/CSS. La partie technique 
+permettant l'envoi des données vers un serveur est une compétence que 
+j'acquerrai au cours du BTS SIO.
 
 ## 📬 Contact
 
