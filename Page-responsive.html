@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Cette balise dit au navigateur d'adapter la page à la taille de l'écran -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Responsive — Fagla225</title>
+
+    <style>
+        /* On remet à zéro les marges par défaut du navigateur */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Style général de la page */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        /* ---- NAVIGATION ---- */
+        nav {
+            background-color: #1a73e8;
+            padding: 15px 20px;
+        }
+
+        nav h1 {
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        /* ---- SECTION HERO (la grande section en haut) ---- */
+        .hero {
+            background-color: #f0f4ff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 1.8rem;
+            color: #1a73e8;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Style du bouton */
+        .bouton {
+            display: inline-block;
+            background-color: #1a73e8;
+            color: white;
+            padding: 10px 25px;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+
+        /* ---- SECTION CONTENU ---- */
+        .contenu {
+            padding: 40px 20px;
+        }
+
+        .contenu h2 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #111;
+        }
+
+        .contenu p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+
+        /* ---- LES 3 CARTES ---- */
+        .cartes {
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .cartes h2 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            color: #111;
+        }
+
+        /* Sur grand écran les cartes sont côte à côte */
+        .grille {
+            display: flex;
+            gap: 15px;
+        }
+
+        .carte {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 20px;
+            flex: 1;
+        }
+
+        .carte h3 {
+            color: #1a73e8;
+            margin-bottom: 8px;
+        }
+
+        .carte p {
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        /* ---- PIED DE PAGE ---- */
+        footer {
+            background-color: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85rem;
+            line-height: 1.8;
+        }
+
+        footer a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        /* ---- RESPONSIVE ----
+           Quand l'écran est plus petit que 600px (téléphone),
+           on change la mise en page */
+        @media (max-width: 600px) {
+
+            /* Le titre hero devient plus petit */
+            .hero h2 {
+                font-size: 1.3rem;
+            }
+
+            /* Les cartes passent en colonne au lieu d'être côte à côte */
+            .grille {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <h1>Fagla225</h1>
+    </nav>
+
+    <!-- SECTION HERO -->
+    <section class="hero">
+        <h2>Une page qui s'adapte à tous les écrans</h2>
+        <p>
+            Que tu consultes cette page sur un téléphone ou un ordinateur,
+            la mise en page s'ajuste automatiquement.
+        </p>
+        <a href="#contenu" class="bouton">En savoir plus</a>
+    </section>
+
+    <!-- SECTION CONTENU -->
+    <section class="contenu" id="contenu">
+        <h2>Pourquoi le responsive ?</h2>
+        <p>
+            Aujourd'hui, plus de la moitié des personnes naviguent sur internet
+            depuis leur téléphone. Un site qui ne s'adapte pas aux petits écrans
+            est difficile à lire et perd des visiteurs.
+        </p>
+        <p>
+            Le responsive design permet d'avoir un seul code HTML/CSS
+            qui fonctionne bien sur tous les appareils.
+        </p>
+    </section>
+
+    <!-- SECTION CARTES -->
+    <section class="cartes">
+        <h2>Technologies utilisées</h2>
+        <div class="grille">
+
+            <div class="carte">
+                <h3>Balises HTML</h3>
+                <p>
+                    Le HTML structure le contenu de la page avec des balises
+                    comme h1, p, section, nav...
+                </p>
+            </div>
+
+            <div class="carte">
+                <h3>CSS</h3>
+                <p>
+                    Le CSS donne du style à la page : couleurs, tailles,
+                    espacements, polices...
+                </p>
+            </div>
+
+            <div class="carte">
+                <h3>Media Queries</h3>
+                <p>
+                    Les media queries permettent d'appliquer un style différent
+                    selon la taille de l'écran.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- PIED DE PAGE -->
+    <footer>
+        <p>Projet réalisé par Fagla225 — HTML / CSS</p>
+        <p>Réalisé avec l'accompagnement d'un développeur front-end et back-end.</p>
+    </footer>
+
+</body>
+</html>
