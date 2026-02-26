@@ -23,7 +23,7 @@ Ils démontrent mes premières compétences en développement front-end.
 
 ## 📝 Note
 
-Ce formulaire est une maquette visuelle en HTML/CSS. La partie technique 
+Le formulaire réalisé est une maquette visuelle en HTML/CSS. La partie technique 
 permettant l'envoi des données vers un serveur est une compétence que 
 j'acquerrai au cours du BTS SIO.
 
