@@ -4,22 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulaire de contact — Fagla225</title>
+    <title>Raoul Fagla — Site Vitrine</title>
 
     <style>
-        /* Style général */
-        * {
+
+        /* style de base */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
             margin: 0;
             padding: 0;
         }
 
-        body {
-            font-family: Arial, sans-serif;
-            color: #333;
-            background-color: #f0f4ff;
+        /* toutes mes sections */
+        section {
+            padding: 30px 20px;
+            border-bottom: 1px solid #eee;
+            max-width: 750px;
+            margin: 0 auto;
         }
 
-        /* ---- NAVIGATION ---- */
+        /* titres des sections en bleu */
+        h2 {
+            color: #1a73e8;
+            margin-bottom: 15px;
+        }
+
+        /* mes paragraphes */
+        p {
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        /* liste de competences et projets */
+        ul {
+            padding-left: 20px;
+            color: #555;
+            line-height: 2;
+        }
+
+        /* la barre de navigation en haut */
         nav {
             background-color: #1a73e8;
             padding: 15px 20px;
@@ -30,84 +55,23 @@
             font-size: 1.2rem;
         }
 
-        /* ---- CARTE DU FORMULAIRE ---- */
-        /* On centre la carte au milieu de la page */
-        .carte {
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            padding: 30px 25px;
-            max-width: 480px;
-            margin: 40px auto;
-        }
-
-        .carte h2 {
+        /* mes boutons de contact avec juste un contour */
+        .bouton-contact {
+            display: inline-block;
             color: #1a73e8;
-            margin-bottom: 8px;
-        }
-
-        .carte p {
-            color: #555;
-            font-size: 0.9rem;
-            margin-bottom: 25px;
-        }
-
-        /* ---- CHAMPS DU FORMULAIRE ---- */
-        /* Chaque groupe label + input */
-        .groupe {
-            margin-bottom: 20px;
-        }
-
-        /* Le label c'est le texte au-dessus du champ */
-        label {
-            display: block;
-            font-size: 0.85rem;
-            font-weight: bold;
-            margin-bottom: 6px;
-            color: #333;
-        }
-
-        /* Les champs de saisie */
-        input, textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ddd;
+            padding: 10px 20px;
+            text-decoration: none;
             border-radius: 4px;
-            font-family: Arial, sans-serif;
-            font-size: 0.95rem;
-            color: #333;
-            /* box-sizing permet que le padding
-               ne dépasse pas la largeur du champ */
-            box-sizing: border-box;
+            border: 1px solid #1a73e8;
+            margin-top: 10px;
+            margin-right: 8px;
         }
 
-        /* Quand on clique sur un champ, il devient bleu */
-        input:focus, textarea:focus {
-            border-color: #1a73e8;
-            outline: none;
+        .bouton-contact:hover {
+            background-color: #f0f4ff;
         }
 
-        /* La zone de texte pour le message */
-        textarea {
-            height: 120px;
-            resize: vertical;
-        }
-
-        /* ---- BOUTON ENVOYER ---- */
-        .bouton {
-            display: block;
-            width: 100%;
-            padding: 12px;
-            background-color: #1a73e8;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            font-size: 1rem;
-            font-family: Arial, sans-serif;
-            cursor: pointer;
-        }
-
-        /* ---- PIED DE PAGE ---- */
+        /* le bas de page */
         footer {
             background-color: #111;
             color: #aaa;
@@ -115,66 +79,63 @@
             padding: 20px;
             font-size: 0.85rem;
         }
+
     </style>
 </head>
 
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- la barre de navigation -->
     <nav>
-        <h1>Fagla225</h1>
+        <h1>Raoul Fagla</h1>
     </nav>
 
-    <!-- FORMULAIRE -->
-    <div class="carte">
-        <h2>Contactez-moi</h2>
-        <p>Remplissez ce formulaire pour m'envoyer un message.</p>
+    <!-- qui je suis -->
+    <section id="presentation">
+        <h2>Qui suis-je ?</h2>
+        <p>
+            Je m'appelle Raoul Fagla. Après mon baccalauréat en série
+            littéraire, j'ai découvert la programmation en observant
+            un développeur travailler sur un projet web.
+        </p>
+        <p>
+            Depuis 8 mois, je me forme en autodidacte au développement
+            web. Je suis candidat au BTS SIO option SLAM.
+        </p>
+    </section>
 
-        <!-- action="#" veut dire que le formulaire ne va nulle part
-             car on n'a pas encore de langage serveur -->
-        <form action="#">
+    <!-- ce que j'apprends -->
+    <section id="competences">
+        <h2>Mes compétences</h2>
+        <p>Voici les technologies que j'apprends actuellement :</p>
+        <ul>
+            <li>HTML5 — structure des pages web</li>
+            <li>CSS3 — mise en forme et design</li>
+        </ul>
+    </section>
 
-            <!-- CHAMP NOM -->
-            <div class="groupe">
-                <label for="nom">Nom</label>
-                <input
-                    type="text"
-                    id="nom"
-                    name="nom"
-                    placeholder="Votre nom"
-                >
-            </div>
+    <!-- mes realisations -->
+    <section id="projets">
+        <h2>Mes projets</h2>
+        <p>Voici mes premières réalisations :</p>
+        <ul>
+            <li><strong>Page Responsive</strong> — Page web qui s'adapte à tous les écrans</li>
+            <li><strong>Site Vitrine</strong> — Site de présentation personnelle multi-sections</li>
+            <li><strong>Formulaire stylisé</strong> — Formulaire de contact mis en forme avec CSS</li>
+        </ul>
+    </section>
 
-            <!-- CHAMP EMAIL -->
-            <div class="groupe">
-                <label for="email">Email</label>
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    placeholder="votre@email.com"
-                >
-            </div>
+    <!-- comment me joindre -->
+    <section id="contact">
+        <h2>Me contacter</h2>
+        <p>N'hésitez pas à me contacter pour échanger.</p>
+        <a href="mailto:raoulfagla2@gmail.com" class="bouton-contact">raoulfagla2@gmail.com</a>
+        <a href="https://github.com/Fagla225" target="_blank" class="bouton-contact">GitHub — Fagla225</a>
+    </section>
 
-            <!-- CHAMP MESSAGE -->
-            <div class="groupe">
-                <label for="message">Message</label>
-                <textarea
-                    id="message"
-                    name="message"
-                    placeholder="Écrivez votre message ici..."
-                ></textarea>
-            </div>
-
-            <!-- BOUTON ENVOYER -->
-            <button type="submit" class="bouton">Envoyer</button>
-
-        </form>
-    </div>
-
-    <!-- PIED DE PAGE -->
+    <!-- pied de page -->
     <footer>
-        <p>Formulaire réalisé par Fagla225 — HTML / CSS</p>
+        <p>© 2026 Raoul Fagla — HTML / CSS</p>
     </footer>
 
 </body>
