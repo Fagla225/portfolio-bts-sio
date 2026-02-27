@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fagla225 — Site Vitrine</title>
+    <title>Raoul Fagla — Site Vitrine</title>
 
     <style>
-        /* Style général */
+
+        /* style de base */
         body {
             font-family: Arial, sans-serif;
             color: #333;
@@ -15,26 +16,35 @@
             padding: 0;
         }
 
-        /* Toutes les sections ont le même espacement */
+        /* toutes mes sections */
         section {
             padding: 30px 20px;
             border-bottom: 1px solid #eee;
+            max-width: 750px;
+            margin: 0 auto;
         }
 
-        /* Les titres de section */
+        /* titres des sections en bleu */
         h2 {
             color: #1a73e8;
             margin-bottom: 15px;
         }
 
-        /* Les paragraphes */
+        /* mes paragraphes */
         p {
             line-height: 1.7;
             color: #555;
             margin-bottom: 10px;
         }
 
-        /* NAVIGATION */
+        /* liste de competences et projets */
+        ul {
+            padding-left: 20px;
+            color: #555;
+            line-height: 2;
+        }
+
+        /* la barre de navigation en haut */
         nav {
             background-color: #1a73e8;
             padding: 15px 20px;
@@ -45,42 +55,48 @@
             font-size: 1.2rem;
         }
 
-        /* BOUTONS */
-        .bouton {
+        /* mes boutons de contact avec juste un contour */
+        .bouton-contact {
             display: inline-block;
-            background-color: #1a73e8;
-            color: white;
+            color: #1a73e8;
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 4px;
+            border: 1px solid #1a73e8;
+            margin-top: 10px;
+            margin-right: 8px;
         }
 
-        /* PIED DE PAGE */
+        .bouton-contact:hover {
+            background-color: #f0f4ff;
+        }
+
+        /* le bas de page */
         footer {
             background-color: #111;
             color: #aaa;
             text-align: center;
             padding: 20px;
             font-size: 0.85rem;
-            line-height: 1.8;
         }
+
     </style>
 </head>
 
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- la barre de navigation -->
     <nav>
-        <h1>Fagla225</h1>
+        <h1>Raoul Fagla</h1>
     </nav>
 
-    <!-- PRÉSENTATION -->
+    <!-- qui je suis -->
     <section id="presentation">
         <h2>Qui suis-je ?</h2>
         <p>
             Je m'appelle Raoul Fagla. Après mon baccalauréat en série
             littéraire, j'ai découvert la programmation en observant
-            un développeur travailler sur son ordinateur.
+            un développeur travailler sur un projet web.
         </p>
         <p>
             Depuis 8 mois, je me forme en autodidacte au développement
@@ -88,7 +104,7 @@
         </p>
     </section>
 
-    <!-- COMPÉTENCES -->
+    <!-- ce que j'apprends -->
     <section id="competences">
         <h2>Mes compétences</h2>
         <p>Voici les technologies que j'apprends actuellement :</p>
@@ -98,43 +114,28 @@
         </ul>
     </section>
 
-    <!-- PROJETS -->
+    <!-- mes realisations -->
     <section id="projets">
         <h2>Mes projets</h2>
         <p>Voici mes premières réalisations :</p>
         <ul>
-            <li>
-                <strong>Page Responsive</strong> —
-                Page web qui s'adapte à tous les écrans
-            </li>
-            <li>
-                <strong>Site Vitrine</strong> —
-                Site de présentation personnelle multi-sections
-            </li>
-            <li>
-                <strong>Formulaire stylisé</strong> —
-                Formulaire de contact mis en forme avec CSS
-            </li>
+            <li><strong>Page Responsive</strong> — Page web qui s'adapte à tous les écrans</li>
+            <li><strong>Site Vitrine</strong> — Site de présentation personnelle multi-sections</li>
+            <li><strong>Formulaire stylisé</strong> — Formulaire de contact mis en forme avec CSS</li>
         </ul>
     </section>
 
-    <!-- CONTACT -->
+    <!-- comment me joindre -->
     <section id="contact">
         <h2>Me contacter</h2>
-        <p>N'hésitez pas à me contacter pour échanger :</p>
-        <br>
-        <a href="mailto:raoulfagla2@gmail.com" class="bouton">
-            raoulfagla2@gmail.com
-        </a>
-        &nbsp;
-        <a href="https://github.com/Fagla225" target="_blank" class="bouton">
-            GitHub — Fagla225
-        </a>
+        <p>N'hésitez pas à me contacter pour échanger.</p>
+        <a href="mailto:raoulfagla2@gmail.com" class="bouton-contact">raoulfagla2@gmail.com</a>
+        <a href="https://github.com/Fagla225" target="_blank" class="bouton-contact">GitHub — Fagla225</a>
     </section>
 
-    <!-- PIED DE PAGE -->
+    <!-- pied de page -->
     <footer>
-        <p>Site réalisé par Fagla225 — HTML / CSS</p>
+        <p>© 2026 Raoul Fagla — HTML / CSS</p>
     </footer>
 
 </body>
