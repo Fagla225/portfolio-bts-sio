@@ -4,47 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raoul Fagla — Site Vitrine</title>
+    <title>Formulaire de contact — Raoul Fagla</title>
 
     <style>
 
-        /* style de base */
-        body {
-            font-family: Arial, sans-serif;
-            color: #333;
+        /* je remets tout a zero */
+        * {
             margin: 0;
             padding: 0;
         }
 
-        /* toutes mes sections */
-        section {
-            padding: 30px 20px;
-            border-bottom: 1px solid #eee;
-            max-width: 750px;
-            margin: 0 auto;
+        /* fond bleu clair pour toute la page */
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f0f4ff;
         }
 
-        /* titres des sections en bleu */
-        h2 {
-            color: #1a73e8;
-            margin-bottom: 15px;
-        }
-
-        /* mes paragraphes */
-        p {
-            line-height: 1.7;
-            color: #555;
-            margin-bottom: 10px;
-        }
-
-        /* liste de competences et projets */
-        ul {
-            padding-left: 20px;
-            color: #555;
-            line-height: 2;
-        }
-
-        /* la barre de navigation en haut */
+        /* la barre en haut */
         nav {
             background-color: #1a73e8;
             padding: 15px 20px;
@@ -55,20 +32,78 @@
             font-size: 1.2rem;
         }
 
-        /* mes boutons de contact avec juste un contour */
-        .bouton-contact {
-            display: inline-block;
-            color: #1a73e8;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 4px;
-            border: 1px solid #1a73e8;
-            margin-top: 10px;
-            margin-right: 8px;
+        /* la carte blanche au milieu */
+        .carte {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            padding: 30px 25px;
+            max-width: 480px;
+            margin: 40px auto;
         }
 
-        .bouton-contact:hover {
-            background-color: #f0f4ff;
+        .carte h2 {
+            color: #1a73e8;
+            margin-bottom: 8px;
+        }
+
+        .carte p {
+            color: #555;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+        }
+
+        /* chaque champ avec son label */
+        .groupe {
+            margin-bottom: 20px;
+        }
+
+        /* le texte au dessus du champ */
+        label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 6px;
+            color: #333;
+        }
+
+        /* les champs de saisie */
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: Arial, sans-serif;
+            font-size: 0.95rem;
+            color: #333;
+            /* box-sizing evite que le champ depasse la largeur */
+            box-sizing: border-box;
+        }
+
+        /* quand on clique sur un champ il devient bleu */
+        input:focus, textarea:focus {
+            border-color: #1a73e8;
+            outline: none;
+        }
+
+        /* la zone de texte pour le message */
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        /* le bouton envoyer */
+        .bouton {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-family: Arial, sans-serif;
+            cursor: pointer;
         }
 
         /* le bas de page */
@@ -85,53 +120,56 @@
 
 <body>
 
-    <!-- la barre de navigation -->
+    <!-- la navigation -->
     <nav>
         <h1>Raoul Fagla</h1>
     </nav>
 
-    <!-- qui je suis -->
-    <section id="presentation">
-        <h2>Qui suis-je ?</h2>
-        <p>
-            Je m'appelle Raoul Fagla. Après mon baccalauréat en série
-            littéraire, j'ai découvert la programmation en observant
-            un développeur travailler sur un projet web.
-        </p>
-        <p>
-            Depuis 8 mois, je me forme en autodidacte au développement
-            web. Je suis candidat au BTS SIO option SLAM.
-        </p>
-    </section>
+    <!-- le formulaire dans sa carte blanche -->
+    <div class="carte">
+        <h2>Contactez-moi</h2>
+        <p>Remplissez ce formulaire pour m'envoyer un message.</p>
 
-    <!-- ce que j'apprends -->
-    <section id="competences">
-        <h2>Mes compétences</h2>
-        <p>Voici les technologies que j'apprends actuellement :</p>
-        <ul>
-            <li>HTML5 — structure des pages web</li>
-            <li>CSS3 — mise en forme et design</li>
-        </ul>
-    </section>
+        <!-- action="#" car je n'ai pas encore appris le langage serveur -->
+        <form action="#">
 
-    <!-- mes realisations -->
-    <section id="projets">
-        <h2>Mes projets</h2>
-        <p>Voici mes premières réalisations :</p>
-        <ul>
-            <li><strong>Page Responsive</strong> — Page web qui s'adapte à tous les écrans</li>
-            <li><strong>Site Vitrine</strong> — Site de présentation personnelle multi-sections</li>
-            <li><strong>Formulaire stylisé</strong> — Formulaire de contact mis en forme avec CSS</li>
-        </ul>
-    </section>
+            <!-- champ pour le nom -->
+            <div class="groupe">
+                <label for="nom">Nom</label>
+                <input
+                    type="text"
+                    id="nom"
+                    name="nom"
+                    placeholder="Votre nom"
+                >
+            </div>
 
-    <!-- comment me joindre -->
-    <section id="contact">
-        <h2>Me contacter</h2>
-        <p>N'hésitez pas à me contacter pour échanger.</p>
-        <a href="mailto:raoulfagla2@gmail.com" class="bouton-contact">raoulfagla2@gmail.com</a>
-        <a href="https://github.com/Fagla225" target="_blank" class="bouton-contact">GitHub — Fagla225</a>
-    </section>
+            <!-- champ pour l'email -->
+            <div class="groupe">
+                <label for="email">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="votre@email.com"
+                >
+            </div>
+
+            <!-- champ pour le message -->
+            <div class="groupe">
+                <label for="message">Message</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Écrivez votre message ici..."
+                ></textarea>
+            </div>
+
+            <!-- bouton pour envoyer -->
+            <button type="submit" class="bouton">Envoyer</button>
+
+        </form>
+    </div>
 
     <!-- pied de page -->
     <footer>
@@ -139,4 +177,5 @@
     </footer>
 
 </body>
-</html>
+                    </html>
+                    
