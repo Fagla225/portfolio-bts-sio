@@ -3,24 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- Cette balise dit au navigateur d'adapter la page à la taille de l'écran -->
+    <!-- cette balise permet d'adapter la page au telephone -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Responsive — Fagla225</title>
+    <title>Page Responsive — Raoul Fagla</title>
 
     <style>
-        /* On remet à zéro les marges par défaut du navigateur */
+
+        /* je remets les marges a zero */
         * {
             margin: 0;
             padding: 0;
         }
 
-        /* Style général de la page */
+        /* style general */
         body {
             font-family: Arial, sans-serif;
             color: #333;
         }
 
-        /* ---- NAVIGATION ---- */
+        /* la barre en haut */
         nav {
             background-color: #1a73e8;
             padding: 15px 20px;
@@ -31,7 +32,7 @@
             font-size: 1.2rem;
         }
 
-        /* ---- SECTION HERO (la grande section en haut) ---- */
+        /* la grande section du haut */
         .hero {
             background-color: #f0f4ff;
             padding: 50px 20px;
@@ -50,7 +51,7 @@
             margin-bottom: 20px;
         }
 
-        /* Style du bouton */
+        /* mon bouton */
         .bouton {
             display: inline-block;
             background-color: #1a73e8;
@@ -60,9 +61,11 @@
             border-radius: 4px;
         }
 
-        /* ---- SECTION CONTENU ---- */
+        /* la section du milieu */
         .contenu {
             padding: 40px 20px;
+            max-width: 750px;
+            margin: 0 auto;
         }
 
         .contenu h2 {
@@ -77,7 +80,7 @@
             margin-bottom: 15px;
         }
 
-        /* ---- LES 3 CARTES ---- */
+        /* la section avec les 3 cartes */
         .cartes {
             padding: 40px 20px;
             background-color: #f9f9f9;
@@ -87,12 +90,17 @@
             font-size: 1.4rem;
             margin-bottom: 20px;
             color: #111;
+            max-width: 750px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
-        /* Sur grand écran les cartes sont côte à côte */
+        /* les cartes sont cote a cote sur grand ecran */
         .grille {
             display: flex;
             gap: 15px;
+            max-width: 750px;
+            margin: 0 auto;
         }
 
         .carte {
@@ -113,7 +121,7 @@
             font-size: 0.9rem;
         }
 
-        /* ---- PIED DE PAGE ---- */
+        /* le bas de page */
         footer {
             background-color: #111;
             color: #aaa;
@@ -128,32 +136,31 @@
             text-decoration: none;
         }
 
-        /* ---- RESPONSIVE ----
-           Quand l'écran est plus petit que 600px (téléphone),
-           on change la mise en page */
+        /* adaptation telephone - quand l ecran est petit */
         @media (max-width: 600px) {
 
-            /* Le titre hero devient plus petit */
+            /* le titre devient plus petit sur telephone */
             .hero h2 {
                 font-size: 1.3rem;
             }
 
-            /* Les cartes passent en colonne au lieu d'être côte à côte */
+            /* les cartes passent en colonne sur telephone */
             .grille {
                 flex-direction: column;
             }
         }
+
     </style>
 </head>
 
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- la navigation -->
     <nav>
-        <h1>Fagla225</h1>
+        <h1>Raoul Fagla</h1>
     </nav>
 
-    <!-- SECTION HERO -->
+    <!-- le haut de page -->
     <section class="hero">
         <h2>Une page qui s'adapte à tous les écrans</h2>
         <p>
@@ -163,7 +170,7 @@
         <a href="#contenu" class="bouton">En savoir plus</a>
     </section>
 
-    <!-- SECTION CONTENU -->
+    <!-- explication du responsive -->
     <section class="contenu" id="contenu">
         <h2>Pourquoi le responsive ?</h2>
         <p>
@@ -177,7 +184,7 @@
         </p>
     </section>
 
-    <!-- SECTION CARTES -->
+    <!-- les 3 cartes technologies -->
     <section class="cartes">
         <h2>Technologies utilisées</h2>
         <div class="grille">
@@ -209,9 +216,9 @@
         </div>
     </section>
 
-    <!-- PIED DE PAGE -->
+    <!-- pied de page -->
     <footer>
-        <p>Projet réalisé par Fagla225 — HTML / CSS</p>
+        <p>© 2026 Raoul Fagla — HTML / CSS</p>
         <p>Réalisé avec l'accompagnement d'un développeur front-end et back-end.</p>
     </footer>
 
