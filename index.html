@@ -72,16 +72,25 @@
             border: 3px solid #1a73e8;
         }
 
-        /* bouton pour aller vers mon parcours */
+        /* boutons hero */
+        .zone-boutons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
         .mon-bouton {
             display: inline-block;
-            margin-top: 20px;
             padding: 10px 20px;
             background-color: #1a73e8;
             color: white;
             border-radius: 4px;
             text-decoration: none;
             font-size: 0.9rem;
+            min-width: 180px;
+            text-align: center;
         }
 
         /* toutes mes sections ont le meme style de base */
@@ -235,7 +244,12 @@
     <h1>Error 404 : <span>Passion</span> not found.</h1>
     <p>Ce message aurait pu résumer les mois qui ont suivi mon baccalauréat. Sans perspective claire, j'ai traversé une période de doute — jusqu'à ce que tout bascule au SIADE 2025 (Salon International de l'Intelligence Artificielle, de la Défense et de l'Espace) à Abidjan. Voir comment la cybersécurité et l'IA construisent notre souveraineté numérique a éveillé ma curiosité et fait naître ma passion pour la programmation, socle de ces deux domaines.</p>
     <p>Plus j'apprends, plus ma conviction se renforce. Ce n'est pas une voie trouvée par hasard — c'est une voie qui fait partie de mon histoire et qui s'impose comme la seule.</p>
-    <a href="#parcours" class="mon-bouton">Découvrir mon parcours</a>
+    <div class="zone-boutons">
+        <a href="#parcours" class="mon-bouton">Découvrir mon parcours</a>
+        <a href="#projets" class="mon-bouton">Mes projets</a>
+        <a href="#pourquoi" class="mon-bouton">Pourquoi le BTS SIO ?</a>
+        <a href="#objectifs" class="mon-bouton">Mes objectifs</a>
+    </div>
 </header>
 
 <!-- mon histoire et mon parcours -->
@@ -244,8 +258,9 @@
         <h2>Du bac littéraire au code</h2>
         <p>Bien avant d'écrire ma première ligne de code, j'avais déjà des idées. Durant mes années de lycée, je rêvais de créer des applications, des plateformes, des solutions numériques. Mais lors d'une journée d'orientation, on m'a dit que le développement était réservé aux filières scientifiques. Découragé, j'ai mis ce rêve de côté.</p>
         <p>En février 2025, j'ai participé au SIADE à Abidjan. Le Dr Ousmane Diallo, ingénieur et astrophysicien à la NASA, y a prononcé ces mots : "Casser le mot impossible et le transformer en je suis possible. Je suis possible car j'y ai cru." Ce jour-là, j'ai compris que mon bac littéraire n'était pas une limite — c'était un point de départ différent. J'ai approché une connaissance, M. Djédjé Junior, développeur professionnel, qui m'a conseillé de commencer par le HTML et le CSS sans griller les étapes.</p>
-        <p>Depuis huit mois, je me forme au HTML et au CSS sur freeCodeCamp, W3Schools et YouTube. M. Djédjé Junior m'a conseillé de commencer par ces bases avant de progresser vers JavaScript et les langages serveur tels que PHP. Naturellement, durant ma progression j'ai débuté le JavaScript. J'ai concrétisé cet apprentissage par un portfolio GitHub (Fagla225) et un cahier des charges pour un projet e-commerce baptisé ITS — Ivorian Trade and Services, imaginé durant mes années lycée.</p>
+        <p>Depuis huit mois, je me forme au HTML et au CSS sur freeCodeCamp, W3Schools et YouTube, auxquels j'ai progressivement ajouté le JavaScript. M. Djédjé Junior m'a conseillé de commencer par ces bases avant de progresser vers les langages serveur tels que PHP. J'ai concrétisé cet apprentissage par un portfolio GitHub (Fagla225) et un cahier des charges pour un projet e-commerce baptisé ITS — Ivorian Trade and Services, imaginé durant mes années lycée.</p>
         <p class="texte-important">Conscient que les mathématiques constituent un socle fondamental pour la programmation et la cybersécurité, j'ai entrepris de me mettre à niveau par exigence personnelle. Repasser le baccalauréat scientifique en candidat libre est pour moi une façon concrète d'attester de ma progression et de démontrer ma détermination à réussir dans ce domaine.</p>
+        <p class="texte-important">Je me suis mis à niveau et je passerai en candidat libre le baccalauréat général série C, filière scientifique ivoirienne, en juin 2026.</p>
         <blockquote class="ma-citation">Je ne suis pas le candidat au parcours linéaire, mais celui qui a trouvé sa voie et qui s'engage à fournir le travail nécessaire pour y réussir.</blockquote>
     </div>
 </div>
@@ -280,7 +295,7 @@
 </div>
 
 <!-- mes projets -->
-<div>
+<div id="projets">
     <div class="ma-section">
         <h2>Mes premières réalisations</h2>
 
@@ -305,7 +320,7 @@
 </div>
 
 <!-- pourquoi le BTS SIO SLAM en France -->
-<div class="fond-gris">
+<div id="pourquoi" class="fond-gris">
     <div class="ma-section">
         <h2>Pourquoi le BTS SIO SLAM en France ?</h2>
         <p>J'ai choisi le BTS SIO option SLAM car c'est la formation qui correspond exactement à ce que je cherche, celle qui permettra d'approfondir et de développer de nouvelles compétences techniques pour m'inscrire dans ma perspective de DevSecOps. Cette formation sera pour moi l'occasion de développer une méthodologie professionnelle solide, d'apprendre de nouveaux langages de programmation et d'élargir ma vision du développement au-delà de l'autodidaxie.</p>
@@ -315,7 +330,7 @@
 </div>
 
 <!-- mes objectifs -->
-<div>
+<div id="objectifs">
     <div class="ma-section">
         <h2>Mes objectifs professionnels</h2>
         <div class="frise">
