@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ami 3.0</title>
+    <style>
+
+        /* je remets tout a zero */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* style general de la page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f4ff;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 20px;
+        }
+
+        /* le titre principal */
+        .titre-app {
+            font-size: 2rem;
+            color: #1a73e8;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+
+        /* la description sous le titre */
+        .description-app {
+            font-size: 0.95rem;
+            color: #777;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        /* la boite principale */
+        .boite-principale {
+            background: white;
+            border-radius: 8px;
+            padding: 25px;
+            width: 100%;
+            max-width: 550px;
+            border: 1px solid #ddd;
+        }
+
+        /* le label au dessus du champ */
+        label {
+            display: block;
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        /* la zone de texte pour le message */
+        .champ-message {
+            width: 100%;
+            height: 130px;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 0.95rem;
+            resize: vertical;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        /* quand on clique sur le champ il devient bleu */
+        .champ-message:focus {
+            outline: none;
+            border-color: #1a73e8;
+        }
+
+        /* le compteur de caracteres */
+        .compteur {
+            text-align: right;
+            font-size: 0.8rem;
+            color: #999;
+            margin-top: 4px;
+            margin-bottom: 20px;
+        }
+
+        /* le titre de la section reseaux */
+        .titre-reseaux {
+            font-size: 0.9rem;
+            color: #555;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        /* la liste des reseaux sociaux */
+        .liste-reseaux {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        /* chaque ligne reseau */
+        .ligne-reseau {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* quand on survole une ligne */
+        .ligne-reseau:hover {
+            background-color: #f9f9f9;
+        }
+
+        /* quand le reseau est selectionne */
+        .ligne-reseau.selectionne {
+            border-color: #1a73e8;
+            background-color: #f0f4ff;
+        }
+
+        /* la case a cocher */
+        .ligne-reseau input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            cursor: pointer;
+            accent-color: #1a73e8;
+        }
+
+        /* le logo du reseau */
+        .logo-reseau {
+            width: 28px;
+            height: 28px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        /* couleurs des logos */
+        .logo-facebook { background-color: #1877f2; }
+        .logo-whatsapp { background-color: #25d366; }
+        .logo-instagram { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+        .logo-x { background-color: #000000; }
+
+        /* le nom du reseau */
+        .nom-reseau {
+            font-size: 0.95rem;
+            color: #333;
+        }
+
+        /* le bouton publier */
+        .bouton-publier {
+            width: 100%;
+            padding: 12px;
+            background-color: #1a73e8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+
+        /* quand on survole le bouton */
+        .bouton-publier:hover {
+            background-color: #1558b0;
+        }
+
+        /* le message de confirmation */
+        .message-confirmation {
+            display: none;
+            margin-top: 15px;
+            padding: 12px 15px;
+            background-color: #e6f4ea;
+            border: 1px solid #34a853;
+            border-radius: 5px;
+            color: #2d7a3a;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        /* le message d erreur */
+        .message-erreur {
+            display: none;
+            margin-top: 15px;
+            padding: 12px 15px;
+            background-color: #fce8e6;
+            border: 1px solid #ea4335;
+            border-radius: 5px;
+            color: #c5221f;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        /* le bas de page */
+        .bas-page {
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #aaa;
+            text-align: center;
+        }
+
+        /* adaptation mobile */
+        @media (max-width: 600px) {
+            .titre-app { font-size: 1.6rem; }
+            .boite-principale { padding: 18px; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- le titre et la description de l application -->
+    <h1 class="titre-app">Ami 3.0</h1>
+    <p class="description-app">Rédigez un message et publiez-le sur tous vos réseaux en un seul clic.</p>
+
+    <!-- la boite principale -->
+    <div class="boite-principale">
+
+        <!-- la zone de texte -->
+        <label for="mon-message">Votre message</label>
+        <textarea class="champ-message" id="mon-message" placeholder="Rédigez votre message ici..."></textarea>
+        <p class="compteur"><span id="nb-caracteres">0</span> caractères</p>
+
+        <!-- les reseaux sociaux -->
+        <p class="titre-reseaux">Choisissez vos réseaux</p>
+        <div class="liste-reseaux">
+
+            <div class="ligne-reseau" onclick="selectionnerReseau(this)">
+                <input type="checkbox" id="facebook">
+                <div class="logo-reseau logo-facebook">f</div>
+                <label for="facebook" class="nom-reseau" style="margin:0; font-weight:normal; cursor:pointer;">Facebook</label>
+            </div>
+
+            <div class="ligne-reseau" onclick="selectionnerReseau(this)">
+                <input type="checkbox" id="whatsapp">
+                <div class="logo-reseau logo-whatsapp">W</div>
+                <label for="whatsapp" class="nom-reseau" style="margin:0; font-weight:normal; cursor:pointer;">WhatsApp</label>
+            </div>
+
+            <div class="ligne-reseau" onclick="selectionnerReseau(this)">
+                <input type="checkbox" id="instagram">
+                <div class="logo-reseau logo-instagram">in</div>
+                <label for="instagram" class="nom-reseau" style="margin:0; font-weight:normal; cursor:pointer;">Instagram</label>
+            </div>
+
+            <div class="ligne-reseau" onclick="selectionnerReseau(this)">
+                <input type="checkbox" id="x-twitter">
+                <div class="logo-reseau logo-x">X</div>
+                <label for="x-twitter" class="nom-reseau" style="margin:0; font-weight:normal; cursor:pointer;">X (Twitter)</label>
+            </div>
+
+        </div>
+
+        <!-- le bouton publier -->
+        <button class="bouton-publier" onclick="publierMessage()">Publier sur les réseaux sélectionnés</button>
+
+        <!-- les messages de retour -->
+        <div class="message-confirmation" id="confirmation">
+            ✓ Message publié avec succès sur les réseaux sélectionnés !
+        </div>
+        <div class="message-erreur" id="erreur">
+            ✗ Veuillez rédiger un message et sélectionner au moins un réseau.
+        </div>
+
+    </div>
+
+    <!-- le bas de page -->
+    <p class="bas-page">© 2026 Raoul Fagla — Ami 3.0 — Projet en cours de développement</p>
+
+    <script>
+
+        // je compte les caracteres du message en temps reel
+        var champMessage = document.getElementById("mon-message");
+        var nbCaracteres = document.getElementById("nb-caracteres");
+
+        champMessage.addEventListener("keyup", function() {
+            nbCaracteres.textContent = champMessage.value.length;
+        });
+
+        // je selectionne ou deselectionne un reseau en cliquant sur la ligne
+        function selectionnerReseau(ligne) {
+            var caseACocher = ligne.querySelector("input[type='checkbox']");
+            caseACocher.checked = !caseACocher.checked;
+            if (caseACocher.checked) {
+                ligne.classList.add("selectionne");
+            } else {
+                ligne.classList.remove("selectionne");
+            }
+        }
+
+        // je verifie que le message et au moins un reseau sont selectionnes
+        function publierMessage() {
+            var message = champMessage.value.trim();
+            var reseauxCoches = document.querySelectorAll("input[type='checkbox']:checked");
+            var confirmation = document.getElementById("confirmation");
+            var erreur = document.getElementById("erreur");
+
+            // je cache les deux messages avant de verifier
+            confirmation.style.display = "none";
+            erreur.style.display = "none";
+
+            if (message === "" || reseauxCoches.length === 0) {
+                erreur.style.display = "block";
+            } else {
+                confirmation.style.display = "block";
+                // je remet tout a zero apres publication
+                champMessage.value = "";
+                nbCaracteres.textContent = "0";
+                document.querySelectorAll("input[type='checkbox']").forEach(function(caseACocher) {
+                    caseACocher.checked = false;
+                });
+                document.querySelectorAll(".ligne-reseau").forEach(function(ligne) {
+                    ligne.classList.remove("selectionne");
+                });
+            }
+        }
+
+    </script>
+
+</body>
+</html>
